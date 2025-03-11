@@ -7,7 +7,8 @@ module com.example.fitnessappproject {
     requires net.synedra.validatorfx;
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
+    requires java.desktop;
 
-    opens com.example.fitnessappproject to javafx.fxml;
-    exports com.example.fitnessappproject;
+    opens fitnessappproject to javafx.fxml;
+    exports fitnessappproject;
 }
