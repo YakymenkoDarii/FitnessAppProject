@@ -36,6 +36,9 @@ public class Controller {
     private Hyperlink WorckoutLink;
 
     @FXML
+    private Hyperlink ExerciseAndProgressLink;
+
+    @FXML
     void initialize() {
         WorckoutLink.setOnAction(event -> {
             changePage("Worckout.fxml", event);
@@ -54,6 +57,11 @@ public class Controller {
             changePage("Home.fxml", event);
         });
 
+        ExerciseAndProgressLink.setOnAction(event -> {
+            System.out.println("Hello World");
+            changePage("Food.fxml", event);
+        });
+
     }
 //changing pages
     public void changePage(String fxmlFile, ActionEvent event) {
@@ -61,7 +69,10 @@ public class Controller {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fitnessappproject/" + fxmlFile));
             Parent root = loader.load(); // Загрузка FXML и получение корневого элемента
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
+            Scene scene = new Scene(root);
+            //scene.getStylesheets().add(getClass().getResource("css_test.css").toExternalForm());
+            stage.setScene(scene);
+            ExerciseAndProgressLink.getStyleClass().add("myLink");
             stage.show();
 
         } catch (IOException e) {

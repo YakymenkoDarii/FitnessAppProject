@@ -1,30 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.text.Font?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #314448;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.WorckoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #314448;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.WorckoutController">
    <children>
-      <Hyperlink fx:id="HomeLink" focusTraversable="false" layoutX="316.0" layoutY="13.0" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
-      <Hyperlink fx:id="FoodLink" focusTraversable="false" layoutX="395.0" layoutY="14.0" text="Food" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
-      <Hyperlink fx:id="WorckoutLink" focusTraversable="false" layoutX="472.0" layoutY="14.0" text="Worckout" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
-      <Hyperlink fx:id="ClubsLink" focusTraversable="false" layoutX="584.0" layoutY="14.0" text="SportClubs" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
       <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Fitness App" textFill="WHITE">
          <font>
             <Font name="Segoe UI Black" size="64.0" />
@@ -55,5 +38,37 @@
             <Image url="@img/programsimg.jpg" />
          </image>
       </ImageView>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="14.0" prefHeight="100.0" prefWidth="650.0" spacing="10.0">
+         <children>
+            <Hyperlink fx:id="HomeLink" focusTraversable="false" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="FoodLink" focusTraversable="false" text="Food" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="WorckoutLink" focusTraversable="false" text="Worckout" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="ClubsLink" focusTraversable="false" text="SportClubs" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Hyperlink>
+            <Hyperlink fx:id="ExerciseAndProgressLink" focusTraversable="false" style="-fx-underline: false;" styleClass="myLink" text="Exercises and progress" textFill="WHITE">
+               <font>
+                  <Font name="Segoe UI Black" size="14.0" />
+               </font>
+            </Hyperlink>
+         </children>
+         <opaqueInsets>
+            <Insets />
+         </opaqueInsets>
+      </HBox>
    </children>
 </AnchorPane>

@@ -1,0 +1,10 @@
+.root
+{
+    -fx-background-color: #111111;
+}
+#ExerciseAndProgressLink{
+    -fx-text-fill: white;
+}
+#ExerciseAndProgressLink:hover{
+    -fx-text-fill: #cd1717;
+}
