@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.ButtonType?>
+<?import javafx.scene.control.DialogPane?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="491.0" prefWidth="769.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.ExerciseAndProgressController">
+   <children>
+      <DialogPane contentText="Nothing" headerText="Okay" layoutX="145.0" layoutY="25.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="300.0" prefWidth="480.0">
+          <header>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="127.0" prefWidth="480.0">
+               <children>
+                  <Label text="Label" />
+               </children>
+            </AnchorPane>
+          </header>
+          <expandableContent>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="200.0" prefWidth="320.0" />
+          </expandableContent>
+         <content>
+            <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="62.0" prefWidth="480.0">
+               <children>
+                  <Label text="Label" />
+               </children>
+            </AnchorPane>
+         </content>
+         <graphic>
+            <Label text="Label" />
+         </graphic>
+         <buttonTypes>
+            <ButtonType fx:constant="CLOSE" />
+         </buttonTypes>
+      </DialogPane>
+   </children>
+</AnchorPane>

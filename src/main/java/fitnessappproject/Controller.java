@@ -2,6 +2,7 @@ package fitnessappproject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -58,8 +59,7 @@ public class Controller {
         });
 
         ExerciseAndProgressLink.setOnAction(event -> {
-            System.out.println("Hello World");
-            changePage("Food.fxml", event);
+            changePage("ExerciseAndProgress.fxml", event);
         });
 
     }
@@ -70,9 +70,8 @@ public class Controller {
             Parent root = loader.load(); // Загрузка FXML и получение корневого элемента
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-            //scene.getStylesheets().add(getClass().getResource("css_test.css").toExternalForm());
+            //scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("css_test.css")).toExternalForm());
             stage.setScene(scene);
-            ExerciseAndProgressLink.getStyleClass().add("myLink");
             stage.show();
 
         } catch (IOException e) {

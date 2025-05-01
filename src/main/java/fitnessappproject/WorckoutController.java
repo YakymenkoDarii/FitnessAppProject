@@ -2,6 +2,7 @@ package fitnessappproject;
 
 import java.io.IOException;
 import java.net.URL;
+import java.util.Objects;
 import java.util.ResourceBundle;
 
 import javafx.event.ActionEvent;
@@ -17,7 +18,6 @@ import javafx.stage.Stage;
 
 
 public class WorckoutController {
-
 
 
     @FXML
@@ -44,8 +44,6 @@ public class WorckoutController {
     @FXML
     private Hyperlink WorckoutLink;
 
-    @FXML
-    private Hyperlink ExerciseAndProgressLink;
 
     @FXML
     void initialize() {
@@ -66,19 +64,16 @@ public class WorckoutController {
             changePage("Home.fxml", event);
         });
 
-        ExerciseAndProgressLink.setOnAction(event -> {
-            changePage("Food.fxml", event);
-        });
 
     }
     //changing pages
-    public void changePage(String fxmlFile, ActionEvent event) {
+    private void changePage(String fxmlFile, ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fitnessappproject/" + fxmlFile));
             Parent root = loader.load(); // Загрузка FXML и получение корневого элемента
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             Scene scene = new Scene(root);
-            //scene.getStylesheets().add(getClass().getResource("css_test.css").toExternalForm());
+            scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("css_test.css")).toExternalForm());
             stage.setScene(scene);
             stage.show();
 
