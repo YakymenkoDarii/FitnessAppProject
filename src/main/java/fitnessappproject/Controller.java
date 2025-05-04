@@ -59,7 +59,7 @@ public class Controller {
     public void changePage(String fxmlFile, ActionEvent event) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource("/fitnessappproject/" + fxmlFile));
-            Parent root = loader.load(); // Загрузка FXML и получение корневого элемента
+            Parent root = loader.load();
             Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
             stage.setScene(new Scene(root));
             stage.show();

@@ -5,33 +5,39 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #2B9886;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.SportClubsController">
-    <children>
-        <Hyperlink fx:id="HomeLink" focusTraversable="false" layoutX="316.0" layoutY="13.0" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Black" size="14.0" />
-            </font></Hyperlink>
-        <Hyperlink fx:id="FoodLink" focusTraversable="false" layoutX="395.0" layoutY="14.0" text="Food" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Black" size="14.0" />
-            </font></Hyperlink>
-        <Hyperlink fx:id="WorckoutLink" focusTraversable="false" layoutX="472.0" layoutY="14.0" text="Worckout" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Black" size="14.0" />
-            </font></Hyperlink>
-        <Hyperlink fx:id="ClubsLink" focusTraversable="false" layoutX="584.0" layoutY="14.0" text="SportClubs" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Black" size="14.0" />
-            </font></Hyperlink>
-        <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Sport Clubs" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Black" size="64.0" />
-            </font>
-        </Label>
-        <Label layoutX="52.0" layoutY="167.0" prefHeight="26.0" prefWidth="219.0" text="You can find the closest to you" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Black" size="14.0" />
-            </font>
-        </Label>
-    </children>
+<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #2B9886;"
+            xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="fitnessappproject.SportClubsController">
+    <Hyperlink fx:id="HomeLink" focusTraversable="false" layoutX="316.0" layoutY="13.0" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="WHITE" underline="false">
+        <font>
+            <Font name="Segoe UI Black" size="14.0" />
+        </font>
+    </Hyperlink>
+    <Hyperlink fx:id="FoodLink" focusTraversable="false" layoutX="395.0" layoutY="14.0" text="Food" textFill="WHITE" underline="false">
+        <font>
+            <Font name="Segoe UI Black" size="14.0" />
+        </font>
+    </Hyperlink>
+    <Hyperlink fx:id="WorckoutLink" focusTraversable="false" layoutX="472.0" layoutY="14.0" text="Workout" textFill="WHITE" underline="false">
+        <font>
+            <Font name="Segoe UI Black" size="14.0" />
+        </font>
+    </Hyperlink>
+    <Hyperlink fx:id="ClubsLink" focusTraversable="false" layoutX="584.0" layoutY="14.0" text="SportClubs" textFill="WHITE" underline="false">
+        <font>
+            <Font name="Segoe UI Black" size="14.0" />
+        </font>
+    </Hyperlink>
+
+    <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Sport Clubs" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI Black" size="64.0"/>
+        </font>
+    </Label>
+    <Label layoutX="52.0" layoutY="167.0" prefHeight="26.0" prefWidth="219.0" text="You can find the closest to you"
+           textFill="WHITE">
+        <font>
+            <Font name="Segoe UI Black" size="14.0"/>
+        </font>
+    </Label>
 </AnchorPane>

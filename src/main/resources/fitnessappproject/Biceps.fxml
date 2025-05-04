@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="1000.0" prefWidth="700.0" style="-fx-background-color: #4E5BAD;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.BicepsController">
+
+    <!-- ScrollPane для прокрутки всієї сторінки -->
+    <ScrollPane fitToHeight="true" fitToWidth="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+        <content>
+            <VBox alignment="TOP_CENTER" spacing="20.0" style="-fx-background-color: #4E5BAD;" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0">
+                <padding>
+                    <Insets top="20.0" right="20.0" bottom="20.0" left="20.0" />
+                </padding>
+
+
+                <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #6a2bbd; -fx-padding: 10;">
+                    <children>
+                        <Hyperlink fx:id="HomeLink" focusTraversable="false" text="Home" textFill="WHITE" underline="false">
+                            <font>
+                                <Font name="Segoe UI Black" size="14.0" />
+                            </font>
+                        </Hyperlink>
+                        <Hyperlink fx:id="FoodLink" focusTraversable="false" text="Food" textFill="WHITE" underline="false">
+                            <font>
+                                <Font name="Segoe UI Black" size="14.0" />
+                            </font>
+                        </Hyperlink>
+                        <Hyperlink fx:id="WorckoutLink" focusTraversable="false" text="Workout" textFill="WHITE" underline="false">
+                            <font>
+                                <Font name="Segoe UI Black" size="14.0" />
+                            </font>
+                        </Hyperlink>
+                        <Hyperlink fx:id="ClubsLink" focusTraversable="false" text="SportClubs" textFill="WHITE" underline="false">
+                            <font>
+                                <Font name="Segoe UI Black" size="14.0" />
+                            </font>
+                        </Hyperlink>
+                    </children>
+                </HBox>
+
+                <Label prefHeight="94.0" prefWidth="612.0" text="Biceps Workout" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="64.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="20.0" />
+                    </padding>
+                </Label>
+
+                <Label prefHeight="26.0" prefWidth="600.0" text="Powerful exercises for arm growth" textFill="WHITE">
+                    <font>
+                        <Font name="Segoe UI Black" size="14.0" />
+                    </font>
+                    <padding>
+                        <Insets bottom="20.0" />
+                    </padding>
+                </Label>
+
+                <VBox alignment="TOP_CENTER" spacing="20.0">
+                    <padding>
+                        <Insets left="20.0" right="20.0" />
+                    </padding>
+
+                    <VBox alignment="TOP_LEFT" spacing="10.0">
+                        <children>
+                            <Label text="1. Barbell Curl" textFill="WHITE">
+                                <font>
+                                    <Font name="Segoe UI Black" size="18.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="10.0" />
+                                </padding>
+                            </Label>
+                            <Label text="Technique: Stand with barbell at thighs, curl weight up while keeping elbows stationary, squeeze at top, lower slowly." textFill="WHITE" wrapText="true">
+                                <font>
+                                    <Font name="Segoe UI" size="14.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="20.0" />
+                                </padding>
+                            </Label>
+                            <ImageView fitHeight="342.0" fitWidth="761.0" preserveRatio="true">
+                                <image>
+                                    <Image url="@img/barbell_curl.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                    </VBox>
+
+                    <VBox alignment="TOP_LEFT" spacing="10.0">
+                        <children>
+                            <Label text="2. Dumbbell Hammer Curl" textFill="WHITE">
+                                <font>
+                                    <Font name="Segoe UI Black" size="18.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="10.0" />
+                                </padding>
+                            </Label>
+                            <Label text="Technique: Hold dumbbells with neutral grip, curl while keeping palms facing each other, control the descent." textFill="WHITE" wrapText="true">
+                                <font>
+                                    <Font name="Segoe UI" size="14.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="20.0" />
+                                </padding>
+                            </Label>
+                            <ImageView fitHeight="600.0" fitWidth="600.0" preserveRatio="true">
+                                <image>
+                                    <Image url="@img/hammer_curl.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                    </VBox>
+
+                    <VBox alignment="TOP_LEFT" spacing="10.0">
+                        <children>
+                            <Label text="3. Chin-Ups" textFill="WHITE">
+                                <font>
+                                    <Font name="Segoe UI Black" size="18.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="10.0" />
+                                </padding>
+                            </Label>
+                            <Label text="Technique: Underhand grip slightly narrower than shoulders, pull up until chin clears bar, focus on biceps contraction." textFill="WHITE" wrapText="true">
+                                <font>
+                                    <Font name="Segoe UI" size="14.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="20.0" />
+                                </padding>
+                            </Label>
+                            <ImageView fitHeight="476.0" fitWidth="909.0" preserveRatio="true">
+                                <image>
+                                    <Image url="@img/chin_ups.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                    </VBox>
+
+                    <VBox alignment="TOP_LEFT" spacing="10.0">
+                        <children>
+                            <Label text="4. Concentration Curl" textFill="WHITE">
+                                <font>
+                                    <Font name="Segoe UI Black" size="18.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="10.0" />
+                                </padding>
+                            </Label>
+                            <Label text="Technique: Sit with elbow against inner thigh, curl dumbbell while keeping upper arm stationary, peak contraction at top." textFill="WHITE" wrapText="true">
+                                <font>
+                                    <Font name="Segoe UI" size="14.0" />
+                                </font>
+                                <padding>
+                                    <Insets left="10.0" bottom="20.0" />
+                                </padding>
+                            </Label>
+                            <ImageView fitHeight="476.0" fitWidth="909.0" preserveRatio="true">
+                                <image>
+                                    <Image url="@img/concentration_curl.png" />
+                                </image>
+                            </ImageView>
+                        </children>
+                    </VBox>
+                </VBox>
+            </VBox>
+        </content>
+    </ScrollPane>
+</AnchorPane>

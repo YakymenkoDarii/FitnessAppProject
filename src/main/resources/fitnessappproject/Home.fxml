@@ -7,53 +7,73 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #314448;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.WorckoutController">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.WorckoutController">
    <children>
-      <Hyperlink fx:id="HomeLink" focusTraversable="false" layoutX="316.0" layoutY="13.0" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="WHITE">
+
+      <Hyperlink fx:id="HomeLink" focusTraversable="false" layoutX="316.0" layoutY="13.0" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="#ECF0F1" underline="false">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
-      <Hyperlink fx:id="FoodLink" focusTraversable="false" layoutX="395.0" layoutY="14.0" text="Food" textFill="WHITE">
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="FoodLink" focusTraversable="false" layoutX="395.0" layoutY="14.0" text="Food" textFill="#ECF0F1" underline="false">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
-      <Hyperlink fx:id="WorckoutLink" focusTraversable="false" layoutX="472.0" layoutY="14.0" text="Worckout" textFill="WHITE">
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="WorckoutLink" focusTraversable="false" layoutX="472.0" layoutY="14.0" text="Workout" textFill="#ECF0F1" underline="false">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
-      <Hyperlink fx:id="ClubsLink" focusTraversable="false" layoutX="584.0" layoutY="14.0" text="SportClubs" textFill="WHITE">
+         </font>
+      </Hyperlink>
+      <Hyperlink fx:id="ClubsLink" focusTraversable="false" layoutX="584.0" layoutY="14.0" text="SportClubs" textFill="#ECF0F1" underline="false">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
-         </font></Hyperlink>
-      <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Fitness App" textFill="WHITE">
+         </font>
+      </Hyperlink>
+
+      <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Fitness App" textFill="#ECF0F1">
          <font>
             <Font name="Segoe UI Black" size="64.0" />
          </font>
       </Label>
-      <Label layoutX="46.0" layoutY="570.0" prefHeight="26.0" prefWidth="218.0" text="Maple and cinnamon granola" textFill="WHITE">
+
+      <Label layoutX="52.0" layoutY="167.0" prefHeight="26.0" prefWidth="78.0" text="About Us" textFill="#ECF0F1">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
-      <Label layoutX="321.0" layoutY="570.0" prefHeight="26.0" prefWidth="78.0" text="Programs" textAlignment="CENTER" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font>
-      </Label>
-      <Label layoutX="52.0" layoutY="167.0" prefHeight="26.0" prefWidth="78.0" text="About Us" textFill="WHITE">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font>
-      </Label>
-      <ImageView fx:id="FoodImg" fitHeight="180.0" fitWidth="200.0" layoutX="46.0" layoutY="370.0">
+
+      <ImageView fx:id="FoodImg" fitHeight="180.0" fitWidth="200.0" layoutX="46.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/breakfastfood.jpg" />
+            <Image url="@img/healthy_food.jpg" />
          </image>
       </ImageView>
-      <ImageView fx:id="ProgramsImg" fitHeight="180.0" fitWidth="200.0" layoutX="268.0" layoutY="373.0">
+      <Label layoutX="46.0" layoutY="560.0" prefHeight="26.0" prefWidth="218.0" text="Healthy Food Recipes" textFill="#ECF0F1">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+
+      <ImageView fx:id="ProgramsImg" fitHeight="180.0" fitWidth="200.0" layoutX="268.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
          <image>
-            <Image url="@img/programsimg.jpg" />
+            <Image url="@img/workout_programs.jpg" />
          </image>
       </ImageView>
+      <Label layoutX="268.0" layoutY="560.0" prefHeight="26.0" prefWidth="78.0" text="Programs" textAlignment="CENTER" textFill="#ECF0F1">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+
+      <ImageView fx:id="SportImg" fitHeight="180.0" fitWidth="200.0" layoutX="490.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/sport_clubs.jpg" />
+         </image>
+      </ImageView>
+      <Label layoutX="490.0" layoutY="560.0" prefHeight="26.0" prefWidth="200.0" text="Sport Clubs Nearby" textFill="#ECF0F1">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
    </children>
 </AnchorPane>
