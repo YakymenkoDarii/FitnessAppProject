@@ -11,4 +11,6 @@ module com.example.fitnessappproject {
 
     opens fitnessappproject to javafx.fxml;
     exports fitnessappproject;
+    exports fitnessappproject.pageControllers;
+    opens fitnessappproject.pageControllers to javafx.fxml;
 }

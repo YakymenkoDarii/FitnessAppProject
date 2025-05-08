@@ -1,22 +1,14 @@
-package fitnessappproject;
+package fitnessappproject.pageControllers;
 
-import java.io.IOException;
 import java.net.URL;
-import java.util.Objects;
 import java.util.ResourceBundle;
 
-import javafx.event.ActionEvent;
+import fitnessappproject.abstractController.AbstractController;
 import javafx.fxml.FXML;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Node;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
-import javafx.stage.Stage;
 
 
-
-public class Controller {
+public class Controller extends AbstractController {
 
     @FXML
     private ResourceBundle resources;
@@ -62,21 +54,6 @@ public class Controller {
             changePage("ExerciseAndProgress.fxml", event);
         });
 
-    }
-//changing pages
-    public void changePage(String fxmlFile, ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fitnessappproject/" + fxmlFile));
-            Parent root = loader.load(); // Загрузка FXML и получение корневого элемента
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            Scene scene = new Scene(root);
-            //scene.getStylesheets().add(Objects.requireNonNull(getClass().getResource("css_test.css")).toExternalForm());
-            stage.setScene(scene);
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
     }
 }
 

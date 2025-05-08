@@ -7,7 +7,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #8434e0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.FoodController">
+<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #8434e0;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.FoodController">
          <children>
               <Label layoutX="49.0" layoutY="225.0" prefHeight="26.0" prefWidth="218.0" text="Maple and cinnamon granola" textFill="WHITE">
                   <font>
