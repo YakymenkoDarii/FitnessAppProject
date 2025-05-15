@@ -23,16 +23,19 @@
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
 
-<BorderPane fx:id="mainPane" prefHeight="725.0" prefWidth="1589.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<BorderPane fx:id="mainPane" stylesheets="@styles/exercise_and_progress.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.ExerciseAndProgressController">
    <top>
       <HBox alignment="CENTER" spacing="10.0" BorderPane.alignment="CENTER">
          <children>
-            <Button mnemonicParsing="false" text="Home" />
-            <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" text="Food" />
-            <Button layoutX="62.0" layoutY="10.0" mnemonicParsing="false" text="Muscles" />
-            <Button layoutX="114.0" layoutY="10.0" mnemonicParsing="false" text="Sport Clubs" />
-            <Button disable="true" mnemonicParsing="false" text="Exercises and Progress" />
+            <Button fx:id="homeButton" focusTraversable="false" mnemonicParsing="false" styleClass="menuButtons" />
+            <Button fx:id="foodButton" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Food" />
+            <Button fx:id="musclesButton" focusTraversable="false" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Muscles" />
+            <Button fx:id="sportClubsButton" focusTraversable="false" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Sport Clubs" />
+            <Button fx:id="exercisesAndProgressButton" disable="true" focusTraversable="false" mnemonicParsing="false" styleClass="menuButtons" text="Exercises and Progress" />
          </children>
+         <BorderPane.margin>
+            <Insets top="8.0" />
+         </BorderPane.margin>
       </HBox>
    </top>
    <center>
@@ -87,6 +90,9 @@
                            </content>
                         </Tab>
                     </tabs>
+                     <VBox.margin>
+                        <Insets left="8.0" />
+                     </VBox.margin>
                   </TabPane>
                   <HBox alignment="CENTER" spacing="10.0" VBox.vgrow="NEVER">
                      <children>
@@ -126,7 +132,10 @@
                            <GridPane.margin>
                               <Insets top="20.0" />
                            </GridPane.margin></Label>
-                        <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Save Log" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM" />
+                        <Button contentDisplay="CENTER" mnemonicParsing="false" nodeOrientation="LEFT_TO_RIGHT" text="Save Log" GridPane.columnIndex="3" GridPane.halignment="LEFT" GridPane.rowIndex="2" GridPane.valignment="BOTTOM">
+                           <GridPane.margin>
+                              <Insets bottom="8.0" />
+                           </GridPane.margin></Button>
                         <ComboBox prefHeight="25.0" prefWidth="137.0" promptText="Exercise" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="TOP" />
                         <DatePicker prefHeight="25.0" prefWidth="126.0" GridPane.columnIndex="1" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="TOP" GridPane.vgrow="NEVER" />
                         <TextField maxWidth="100.0" prefHeight="25.0" prefWidth="80.0" GridPane.columnIndex="2" GridPane.halignment="LEFT" GridPane.hgrow="NEVER" GridPane.rowIndex="2" GridPane.valignment="TOP" GridPane.vgrow="NEVER">
@@ -146,6 +155,9 @@
                            </GridPane.margin>
                         </Label>
                      </children>
+                     <padding>
+                        <Insets bottom="4.0" left="4.0" />
+                     </padding>
                   </GridPane>
                </children>
             </VBox>

@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #314448;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.Controller" stylesheets="@css_test.css">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #314448;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.Controller" stylesheets="@styles/css_test.css">
    <children>
       <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Fitness App" textFill="WHITE">
          <font>
