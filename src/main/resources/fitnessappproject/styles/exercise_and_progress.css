@@ -7,4 +7,13 @@
     -fx-border-width: 0;
     -fx-focus-color: transparent;
     -fx-faint-focus-color: transparent;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-size: 14px;
+    -fx-text-fill: #0078D7;
+    -fx-font-weight: bold;
+    -fx-content-display: top;
+    -fx-alignment: center;
+}
+.menuButtons:hover {
+    -fx-text-fill: rgba(0, 120, 215, 0.6);
 }

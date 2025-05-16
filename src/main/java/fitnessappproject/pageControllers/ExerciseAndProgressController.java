@@ -3,6 +3,7 @@ package fitnessappproject.pageControllers;
 import fitnessappproject.abstractController.AbstractController;
 import javafx.event.Event;
 import javafx.fxml.FXML;
+import javafx.scene.control.TabPane;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
@@ -13,6 +14,7 @@ public class ExerciseAndProgressController extends AbstractController
 {
     @FXML
     private BorderPane mainPane;
+
     @FXML
     private Button homeButton;
     @FXML
@@ -22,14 +24,23 @@ public class ExerciseAndProgressController extends AbstractController
     @FXML
     private Button sportClubsButton;
     @FXML
-    private Button exerciseAndProgressButton;
+    private Button exercisesAndProgressButton;
+
+    @FXML
+    private TabPane tabPane;
+    @FXML
+    private Button addGroupButton;
 
     @FXML
     void initialize()
     {
         setMaximizedWindow();
 
-        setPictureForTheButton(homeButton, "homeButton.png");
+        setPictureForTheButton(homeButton, "HomeButton.png");
+        setPictureForTheButton(foodButton, "FoodButton.png");
+        setPictureForTheButton(musclesButton, "MusclesButton.png");
+        setPictureForTheButton(sportClubsButton, "SportClubsButton.png");
+        setPictureForTheButton(exercisesAndProgressButton, "ExercisesAndProgressButton.png");
 
         homeButton.setOnAction(event -> {
             changePage("Home.fxml", event);
@@ -42,6 +53,9 @@ public class ExerciseAndProgressController extends AbstractController
         });
         sportClubsButton.setOnAction(event -> {
             changePage("SportClubs.fxml", event);
+        });
+        addGroupButton.setOnAction(event -> {
+
         });
 
     }
@@ -77,6 +91,11 @@ public class ExerciseAndProgressController extends AbstractController
 
         button.setOnMouseEntered(e -> imageView.setOpacity(0.6));
         button.setOnMouseExited(e -> imageView.setOpacity(1.0));
+    }
+
+    void createNewTab()
+    {
+        
     }
 }
 
