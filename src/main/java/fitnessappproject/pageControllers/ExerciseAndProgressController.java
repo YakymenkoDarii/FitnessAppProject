@@ -1,14 +1,23 @@
 package fitnessappproject.pageControllers;
 
+import fitnessappproject.AppState;
 import fitnessappproject.abstractController.AbstractController;
-import javafx.event.Event;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.control.Button;
 import javafx.fxml.FXML;
-import javafx.scene.control.TabPane;
+import javafx.geometry.Pos;
+import javafx.scene.control.*;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.BorderPane;
+import javafx.scene.layout.Region;
+import javafx.scene.layout.StackPane;
+import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
-import javafx.scene.control.Button;
+
+import java.io.IOException;
 
 public class ExerciseAndProgressController extends AbstractController
 {
@@ -30,11 +39,15 @@ public class ExerciseAndProgressController extends AbstractController
     private TabPane tabPane;
     @FXML
     private Button addGroupButton;
+    @FXML
+    private Button deleteGroupButton;
 
     @FXML
     void initialize()
     {
         setMaximizedWindow();
+
+        tabPane.getTabs().setAll(AppState.getTabs());
 
         setPictureForTheButton(homeButton, "HomeButton.png");
         setPictureForTheButton(foodButton, "FoodButton.png");
@@ -55,8 +68,9 @@ public class ExerciseAndProgressController extends AbstractController
             changePage("SportClubs.fxml", event);
         });
         addGroupButton.setOnAction(event -> {
-
+            createNewTab();
         });
+        deleteGroupButton.setOnAction(event -> {deleteTab();});
 
     }
 
@@ -95,7 +109,69 @@ public class ExerciseAndProgressController extends AbstractController
 
     void createNewTab()
     {
-        
+        Dialog<String> tabDialog = new Dialog<>();
+        VBox vBox = new VBox();
+        Label label = new Label("Enter tab name:");
+        TextField textField = new TextField();
+        textField.setPromptText("Enter name, example: \"Friday\"");
+        ButtonType addButtonType = new ButtonType("Add Tab", ButtonBar.ButtonData.OK_DONE);
+
+        vBox.setSpacing(10);
+        vBox.setAlignment(Pos.CENTER_LEFT);
+        vBox.getChildren().addAll(label, textField);
+
+        tabDialog.setTitle("Create New Tab");
+        tabDialog.getDialogPane().setContent(vBox);
+        tabDialog.getDialogPane().getButtonTypes().addAll(addButtonType, ButtonType.CANCEL);
+
+        Node addButton = tabDialog.getDialogPane().lookupButton(addButtonType);
+        addButton.setDisable(true);
+
+        textField.textProperty().addListener((obs, oldVal, newVal) -> {
+            addButton.setDisable(newVal.trim().isEmpty());
+        });
+
+        tabDialog.setResultConverter(dialogButton -> {
+            if (dialogButton == addButtonType) {
+                return textField.getText().trim();
+            }
+            return null;
+        });
+
+        tabDialog.showAndWait().ifPresent(tabName -> {
+            System.out.println("New Tab Name: " + tabName);
+            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fitnessappproject/TabContent.fxml"));
+            try {
+                Parent tabContent = loader.load();
+
+                Tab newTab = new Tab(tabName);
+
+                StackPane stackPane = new StackPane(tabContent);
+                stackPane.setPrefSize(Region.USE_COMPUTED_SIZE, Region.USE_COMPUTED_SIZE);
+
+                newTab.setContent(stackPane);
+                if(tabPane.getTabs().stream().noneMatch(t -> t.getText().equals(tabName))) {
+                    AppState.addTab(newTab);
+                    tabPane.getTabs().add(newTab);
+                }
+
+            } catch (IOException e) {
+                throw new RuntimeException(e);
+            }
+        });
+    }
+    void deleteTab()
+    {
+        Tab tabForDelete = tabPane.getSelectionModel().getSelectedItem();
+        if (tabForDelete != null) {
+            Dialog<Object> deleteDialog = new Dialog<>();
+            deleteDialog.setContentText("Are you sure you want to delete \"" + tabForDelete.getText().trim() + "\" Tab?");
+            deleteDialog.getDialogPane().getButtonTypes().addAll(ButtonType.NO, ButtonType.YES);
+            deleteDialog.showAndWait().ifPresent(dialog -> {
+                tabPane.getTabs().remove(tabForDelete);
+                AppState.removeTab(tabForDelete);
+            });
+        }
     }
 }
 

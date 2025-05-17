@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.VBox?>
+
+
+<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+         <TableView editable="true" prefHeight="307.0">
+             <columns>
+                 <TableColumn prefWidth="113.0" text="Exercise" />
+                 <TableColumn prefWidth="102.0" text="Sets" />
+                 <TableColumn prefWidth="113.0" text="Reps" />
+                 <TableColumn prefWidth="113.0" text="Weight(kg)" />
+             </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         </TableView>
+   </children>
+</VBox>
