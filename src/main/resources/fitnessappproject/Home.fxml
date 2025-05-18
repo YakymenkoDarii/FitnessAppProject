@@ -7,73 +7,116 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.WorckoutController">
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.control.Button?>
+<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.Controller">
    <children>
-
-      <Hyperlink fx:id="HomeLink" focusTraversable="false" layoutX="316.0" layoutY="13.0" prefHeight="26.0" prefWidth="55.0" text="Home" textFill="#ECF0F1" underline="false">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font>
-      </Hyperlink>
-      <Hyperlink fx:id="FoodLink" focusTraversable="false" layoutX="395.0" layoutY="14.0" text="Food" textFill="#ECF0F1" underline="false">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font>
-      </Hyperlink>
-      <Hyperlink fx:id="WorckoutLink" focusTraversable="false" layoutX="472.0" layoutY="14.0" text="Workout" textFill="#ECF0F1" underline="false">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font>
-      </Hyperlink>
-      <Hyperlink fx:id="ClubsLink" focusTraversable="false" layoutX="584.0" layoutY="14.0" text="SportClubs" textFill="#ECF0F1" underline="false">
+      <!-- Top navigation links -->
+      <Hyperlink fx:id="HomeLink" layoutX="316.0" layoutY="13.0" text="Home" textFill="#ECF0F1" underline="false">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Hyperlink>
 
-      <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Fitness App" textFill="#ECF0F1">
+      <Hyperlink fx:id="FoodLink" layoutX="395.0" layoutY="14.0" text="Food" textFill="#ECF0F1" underline="false">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Hyperlink>
+
+      <Hyperlink fx:id="WorckoutLink" layoutX="472.0" layoutY="14.0" text="Workout" textFill="#ECF0F1" underline="false">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Hyperlink>
+
+      <Hyperlink fx:id="ClubsLink" layoutX="584.0" layoutY="14.0" text="SportClubs" textFill="#ECF0F1" underline="false">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Hyperlink>
+
+      <!-- Main title -->
+      <Label layoutX="46.0" layoutY="76.0" text="Fitness App" textFill="#ECF0F1">
          <font>
             <Font name="Segoe UI Black" size="64.0" />
          </font>
       </Label>
 
-      <Label layoutX="52.0" layoutY="167.0" prefHeight="26.0" prefWidth="78.0" text="About Us" textFill="#ECF0F1">
+      <!-- Section title -->
+      <Label layoutX="52.0" layoutY="167.0" text="This app helps users improve their fitness by offering healthy food recipes," textFill="#ECF0F1" wrapText="true" maxWidth="600.0">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
 
-      <ImageView fx:id="FoodImg" fitHeight="180.0" fitWidth="200.0" layoutX="46.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/healthy_food.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="46.0" layoutY="560.0" prefHeight="26.0" prefWidth="218.0" text="Healthy Food Recipes" textFill="#ECF0F1">
+      <Label layoutX="52.0" layoutY="187.0" text="workout programs, and information about nearby sports clubs." textFill="#ECF0F1" wrapText="true" maxWidth="600.0">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
 
-      <ImageView fx:id="ProgramsImg" fitHeight="180.0" fitWidth="200.0" layoutX="268.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/workout_programs.jpg" />
-         </image>
-      </ImageView>
-      <Label layoutX="268.0" layoutY="560.0" prefHeight="26.0" prefWidth="78.0" text="Programs" textAlignment="CENTER" textFill="#ECF0F1">
+      <Label layoutX="52.0" layoutY="207.0" text="Users can easily navigate through sections to find suitable resources for their health and fitness." textFill="#ECF0F1" wrapText="true" maxWidth="600.0">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
 
-      <ImageView fx:id="SportImg" fitHeight="180.0" fitWidth="200.0" layoutX="490.0" layoutY="370.0" pickOnBounds="true" preserveRatio="true">
-         <image>
-            <Image url="@img/sport_clubs.jpg" />
-         </image>
+
+      <!-- Food section -->
+      <ImageView fx:id="FoodImg" layoutX="46.0" layoutY="370.0" fitWidth="200.0" fitHeight="180.0"
+                 style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.5, 0, 2); -fx-cursor: hand; "
+                 onMouseEntered="#onHover" onMouseExited="#onExit" preserveRatio="true">
+         <Image url="@img/healthy_food.jpg"/>
       </ImageView>
-      <Label layoutX="490.0" layoutY="560.0" prefHeight="26.0" prefWidth="200.0" text="Sport Clubs Nearby" textFill="#ECF0F1">
+
+      <Label layoutX="46.0" layoutY="560.0" text="Healthy Food Recipes" textFill="#ECF0F1">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Label>
+
+      <Hyperlink fx:id="FoodMoreLink" layoutX="46.0" layoutY="590.0" text="Read more" textFill="#1ABC9C" underline="false"/>
+
+      <!-- Programs section -->
+      <ImageView fx:id="ProgramsImg" layoutX="268.0" layoutY="370.0" fitWidth="200.0" fitHeight="180.0"
+                 style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.5, 0, 2); -fx-cursor: hand; "
+                 onMouseEntered="#onHover" onMouseExited="#onExit" preserveRatio="true">
+         <Image url="@img/workout_programs.jpg"/>
+      </ImageView>
+
+      <Label layoutX="268.0" layoutY="560.0" text="Programs" textFill="#ECF0F1">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+
+      <Hyperlink fx:id="ProgramsMoreLink" layoutX="268.0" layoutY="590.0" text="Read more" textFill="#1ABC9C" underline="false"/>
+
+      <!-- Sport clubs section -->
+      <ImageView fx:id="SportImg" layoutX="490.0" layoutY="370.0" fitWidth="200.0" fitHeight="180.0"
+                 style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.5, 0, 2); -fx-cursor: hand; "
+                 onMouseEntered="#onHover" onMouseExited="#onExit" preserveRatio="true">
+         <Image url="@img/sport_clubs.jpg"/>
+      </ImageView>
+
+      <Label layoutX="490.0" layoutY="560.0" text="Sport Clubs Nearby" textFill="#ECF0F1">
+         <font>
+            <Font name="Segoe UI Black" size="14.0" />
+         </font>
+      </Label>
+
+      <Hyperlink fx:id="ClubsMoreLink" layoutX="490.0" layoutY="590.0" text="Read more" textFill="#1ABC9C" underline="false"/>
+      <!-- For Tips -->
+      <VBox fx:id="tipsPanel" prefWidth="Infinity" prefHeight="100.0" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10" style="-fx-background-color: #34495E; -fx-background-radius: 10; -fx-padding: 10; -fx-spacing: 5;" visible="false">
+         <HBox alignment="CENTER_LEFT" spacing="5">
+            <Label text="💡 Tips" wrapText="true" style="-fx-text-fill: #1ABC9C; -fx-font-weight: bold;"/>
+            <Button fx:id="closeTipsButton" text="✕" style="-fx-background-color: transparent; -fx-text-fill: #ECF0F1; -fx-font-weight: bold; -fx-padding: 0 0 0 5;"/>
+         </HBox>
+         <Label fx:id="tipContent" textFill="#ECF0F1" wrapText="true" maxWidth="600.0"/>
+         <Button fx:id="nextTipButton" text="Next Tip" style="-fx-background-color: #1ABC9C; -fx-text-fill: white;"/>
+      </VBox>
+
    </children>
 </AnchorPane>

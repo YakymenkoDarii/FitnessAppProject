@@ -8,6 +8,7 @@ module com.example.fitnessappproject {
     requires org.kordamp.bootstrapfx.core;
     requires eu.hansolo.tilesfx;
     requires java.desktop;
+    requires java.prefs;
 
     opens fitnessappproject to javafx.fxml;
     exports fitnessappproject;
