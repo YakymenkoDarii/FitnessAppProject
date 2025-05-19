@@ -7,6 +7,8 @@ import java.util.List;
 import java.util.Random;
 import java.util.prefs.Preferences;
 import java.util.ResourceBundle;
+
+import fitnessappproject.abstractController.AbstractController;
 import javafx.animation.FadeTransition;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -24,7 +26,10 @@ import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-public class Controller {
+public class Controller extends AbstractController {
+
+
+
 
     @FXML private ImageView FoodImg, ProgramsImg, SportImg;
     @FXML private Hyperlink ClubsLink, FoodLink, HomeLink, WorckoutLink;
@@ -46,9 +51,14 @@ public class Controller {
             "Balanced nutrition is the basis of progress."
     );
 
+    @FXML
+    private Hyperlink FoodLink;
 
     private final Random random = new Random();
     private final Preferences prefs = Preferences.userNodeForPackage(Controller.class);
+
+    @FXML
+    private Hyperlink ExerciseAndProgressLink;
 
     @FXML
     void initialize() {
@@ -90,6 +100,10 @@ public class Controller {
     }
 
     private void setupImageHoverEffects() {
+
+        ExerciseAndProgressLink.setOnAction(event -> {
+            changePage("ExerciseAndProgress.fxml", event);
+        });
 
         setHoverEffect(FoodImg);
         setHoverEffect(ProgramsImg);

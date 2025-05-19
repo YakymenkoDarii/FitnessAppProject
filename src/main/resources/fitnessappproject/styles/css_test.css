@@ -1,0 +1,10 @@
+.hyperlink {
+    -fx-text-fill: white;
+    -fx-font-family: 'Segoe UI Black';
+    -fx-font-size: 14px;
+    -fx-underline: false;
+}
+
+.hyperlink:hover {
+    -fx-text-fill: #ff6600;
+}

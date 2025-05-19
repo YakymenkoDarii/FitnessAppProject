@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox stylesheets="@styles/exercise_and_progress.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.ExerciseTableController">
+   <children>
+         <TableView fx:id="table" editable="true" focusTraversable="false" prefHeight="307.0">
+             <columns>
+                 <TableColumn fx:id="colExercise" prefWidth="113.0" text="Exercise" />
+                 <TableColumn fx:id="colSets" prefWidth="102.0" text="Sets" />
+                 <TableColumn fx:id="colReps" prefWidth="113.0" text="Reps" />
+                 <TableColumn fx:id="colWeight" prefWidth="113.0" text="Weight(kg)" />
+             </columns>
+         <columnResizePolicy>
+            <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />
+         </columnResizePolicy>
+         </TableView>
+   </children>
+</VBox>

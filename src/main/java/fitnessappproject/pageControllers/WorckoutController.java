@@ -1,8 +1,11 @@
 package fitnessappproject;
 import java.io.IOException;
+
 import java.net.URL;
 import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
+
+import fitnessappproject.abstractController.AbstractController;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
@@ -14,7 +17,9 @@ import javafx.scene.image.ImageView;
 import javafx.scene.input.MouseEvent;
 import javafx.stage.Stage;
 
-public class WorckoutController {
+
+public class WorckoutController extends AbstractController {
+
 
     public ImageView PhotoId;
     @FXML
