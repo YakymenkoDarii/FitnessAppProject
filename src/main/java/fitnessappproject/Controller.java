@@ -66,17 +66,17 @@ public class Controller {
         //  for navigation links
         HomeLink.setOnAction(event -> changePage("Home.fxml", event));
         FoodLink.setOnAction(event -> changePage("Food.fxml", event));
-        WorckoutLink.setOnAction(event -> changePage("Workout.fxml", event));
+        WorckoutLink.setOnAction(event -> changePage("Worckout.fxml", event));
         ClubsLink.setOnAction(event -> changePage("SportClubs.fxml", event));
 
         //  for "Read more" links
         FoodMoreLink.setOnAction(event -> changePage("Food.fxml", event));
-        ProgramsMoreLink.setOnAction(event -> changePage("Worсkout.fxml", event));
+        ProgramsMoreLink.setOnAction(event -> changePage("Worckout.fxml", event));
         ClubsMoreLink.setOnAction(event -> changePage("SportClubs.fxml", event));
 
         //  images clickable
         FoodImg.setOnMouseClicked(event -> changePage("Food.fxml", event));
-        ProgramsImg.setOnMouseClicked(event -> changePage("Workout.fxml", event));
+        ProgramsImg.setOnMouseClicked(event -> changePage("Worckout.fxml", event));
         SportImg.setOnMouseClicked(event -> changePage("SportClubs.fxml", event));
 
         // Style all hyperlinks
