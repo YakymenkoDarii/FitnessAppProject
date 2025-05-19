@@ -1,18 +1,16 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.TableColumn?>
-<?import javafx.scene.control.TableView?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-
-<VBox xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<VBox stylesheets="@styles/exercise_and_progress.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.ExerciseTableController">
    <children>
-         <TableView editable="true" prefHeight="307.0">
+         <TableView fx:id="table" editable="true" focusTraversable="false" prefHeight="307.0">
              <columns>
-                 <TableColumn prefWidth="113.0" text="Exercise" />
-                 <TableColumn prefWidth="102.0" text="Sets" />
-                 <TableColumn prefWidth="113.0" text="Reps" />
-                 <TableColumn prefWidth="113.0" text="Weight(kg)" />
+                 <TableColumn fx:id="colExercise" prefWidth="113.0" text="Exercise" />
+                 <TableColumn fx:id="colSets" prefWidth="102.0" text="Sets" />
+                 <TableColumn fx:id="colReps" prefWidth="113.0" text="Reps" />
+                 <TableColumn fx:id="colWeight" prefWidth="113.0" text="Weight(kg)" />
              </columns>
          <columnResizePolicy>
             <TableView fx:constant="CONSTRAINED_RESIZE_POLICY" />

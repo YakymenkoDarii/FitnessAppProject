@@ -1,7 +1,10 @@
 package fitnessappproject.pageControllers;
 
 import fitnessappproject.AppState;
+import fitnessappproject.ExerciseEntry;
 import fitnessappproject.abstractController.AbstractController;
+import javafx.collections.FXCollections;
+import javafx.collections.ObservableList;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Node;
 import javafx.scene.Parent;
@@ -36,11 +39,28 @@ public class ExerciseAndProgressController extends AbstractController
     private Button exercisesAndProgressButton;
 
     @FXML
-    private TabPane tabPane;
+    public TabPane tabPane;
     @FXML
     private Button addGroupButton;
     @FXML
     private Button deleteGroupButton;
+
+    @FXML
+    private Button addExerciseButton;
+    @FXML
+    private Button deleteExerciseButton;
+
+    @FXML
+    private Button saveLogButton;
+    @FXML
+    private TextField weightTextField;
+    @FXML
+    private DatePicker datePicker;
+    @FXML
+    private ComboBox<String> exerciseComboBox;
+
+    Tab selectedTab;
+    Node content;
 
     @FXML
     void initialize()
@@ -69,9 +89,26 @@ public class ExerciseAndProgressController extends AbstractController
         });
         addGroupButton.setOnAction(event -> {
             createNewTab();
+           // updateCheckBox();
         });
-        deleteGroupButton.setOnAction(event -> {deleteTab();});
+        deleteGroupButton.setOnAction(event -> {
+            deleteTab();
+            //updateCheckBox();
+        });
 
+        addExerciseButton.setOnAction(e -> {
+            ExerciseTableController.handleAddRow(tabPane);
+           // updateCheckBox();
+        });
+        deleteExerciseButton.setOnAction(e -> {
+            ExerciseTableController.handleDeleteRow(tabPane);
+            //updateCheckBox();
+        });
+        tabPane.getSelectionModel().selectedItemProperty().addListener((obs, oldTab, newTab) -> {
+            if (newTab != null) {
+                //updateCheckBox();
+            }
+        });
     }
 
     void setMaximizedWindow()
@@ -144,6 +181,9 @@ public class ExerciseAndProgressController extends AbstractController
             try {
                 Parent tabContent = loader.load();
 
+                ExerciseTableController ctrl = loader.getController();
+                ctrl.setParentController(this);
+
                 Tab newTab = new Tab(tabName);
 
                 StackPane stackPane = new StackPane(tabContent);
@@ -151,8 +191,11 @@ public class ExerciseAndProgressController extends AbstractController
 
                 newTab.setContent(stackPane);
                 if(tabPane.getTabs().stream().noneMatch(t -> t.getText().equals(tabName))) {
+                    ctrl.init(tabName);
                     AppState.addTab(newTab);
+                    AppState.registerController(newTab, ctrl);
                     tabPane.getTabs().add(newTab);
+                    //updateCheckBox();
                 }
 
             } catch (IOException e) {
@@ -170,8 +213,29 @@ public class ExerciseAndProgressController extends AbstractController
             deleteDialog.showAndWait().ifPresent(dialog -> {
                 tabPane.getTabs().remove(tabForDelete);
                 AppState.removeTab(tabForDelete);
+                //updateCheckBox();
             });
         }
     }
+
+//    public void updateCheckBox() {
+//        Tab selectedTab = tabPane.getSelectionModel().getSelectedItem();
+//        if (selectedTab == null) return;
+//
+//        ExerciseTableController controller = AppState.getController(selectedTab);
+//        if (controller == null) {
+//            System.out.println("No controller found for selected tab.");
+//            return;
+//        }
+//
+//        TableView<ExerciseEntry> table = controller.getTableView();
+//        ObservableList<ExerciseEntry> items = table.getItems();
+//
+//        ObservableList<String> names = FXCollections.observableArrayList();
+//        for (ExerciseEntry entry : items) {
+//            names.add(entry.getExercise());
+//        }
+//        exerciseComboBox.setItems(names);
+//    }
 }
 
