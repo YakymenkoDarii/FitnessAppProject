@@ -34,6 +34,8 @@ public class SportClubsController extends AbstractController {
 
     @FXML
     private Hyperlink WorckoutLink;
+    @FXML
+    private Hyperlink ExercisesLink;
 
     @FXML
     void initialize() {
@@ -53,7 +55,9 @@ public class SportClubsController extends AbstractController {
         HomeLink.setOnAction(event -> {
             changePage("Home.fxml", event);
         });
-
+        ExercisesLink.setOnAction(event -> {
+            changePage("ExerciseAndProgress.fxml", event);
+        });
     }
 }
 

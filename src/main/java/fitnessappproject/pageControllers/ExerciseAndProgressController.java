@@ -65,7 +65,7 @@ public class ExerciseAndProgressController extends AbstractController
     @FXML
     void initialize()
     {
-        setMaximizedWindow();
+        //setMaximizedWindow();
 
         tabPane.getTabs().setAll(AppState.getTabs());
 
@@ -111,22 +111,22 @@ public class ExerciseAndProgressController extends AbstractController
         });
     }
 
-    void setMaximizedWindow()
-    {
-        mainPane.sceneProperty().addListener((obs, oldScene, newScene) -> {
-            if (newScene != null) {
-                newScene.windowProperty().addListener((obs2, oldWindow, newWindow) -> {
-                    if (newWindow instanceof Stage stage) {
-                        newWindow.showingProperty().addListener((obs3, wasShowing, isNowShowing) -> {
-                            if (isNowShowing) {
-                                stage.setMaximized(true);
-                            }
-                        });
-                    }
-                });
-            }
-        });
-    }
+//    void setMaximizedWindow()
+//    {
+//        mainPane.sceneProperty().addListener((obs, oldScene, newScene) -> {
+//            if (newScene != null) {
+//                newScene.windowProperty().addListener((obs2, oldWindow, newWindow) -> {
+//                    if (newWindow instanceof Stage stage) {
+//                        newWindow.showingProperty().addListener((obs3, wasShowing, isNowShowing) -> {
+//                            if (isNowShowing) {
+//                                stage.setMaximized(true);
+//                            }
+//                        });
+//                    }
+//                });
+//            }
+//        });
+//    }
     void setPictureForTheButton(Button button, String imageName)
     {
         int imageSize = 36;

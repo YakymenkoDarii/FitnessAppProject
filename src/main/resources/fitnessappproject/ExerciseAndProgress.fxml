@@ -8,7 +8,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane fx:id="mainPane" prefHeight="1040.0" prefWidth="1920.0" stylesheets="@styles/exercise_and_progress.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.ExerciseAndProgressController">
+<BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="700.0" stylesheets="@styles/exercise_and_progress.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.ExerciseAndProgressController">
    <top>
       <HBox alignment="CENTER" spacing="40.0" BorderPane.alignment="CENTER">
          <children>
@@ -39,6 +39,12 @@
                      <VBox.margin>
                         <Insets left="8.0" />
                      </VBox.margin>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                     <padding>
+                        <Insets left="40.0" right="30.0" />
+                     </padding>
                   </TabPane>
                   <HBox alignment="TOP_CENTER" spacing="10.0" VBox.vgrow="NEVER">
                      <children>

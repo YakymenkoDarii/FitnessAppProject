@@ -1,0 +1,54 @@
+/* Global background */
+.root {
+    -fx-background-color: #4E5BAD;
+}
+
+/* Header navigation bar */
+.hyperlink {
+    -fx-text-fill: white;
+    -fx-underline: false;
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-size: 14px;
+    -fx-opacity: 0.9;
+    -fx-border-color: transparent;
+}
+
+.hyperlink:hover {
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+    -fx-text-fill: #FFD700; /* golden on hover */
+}
+
+/* Page title */
+.label.title {
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-size: 64px;
+    -fx-text-fill: white;
+    -fx-alignment: center;
+}
+
+/* Bottom navigation links */
+.label.bottom-nav {
+    -fx-font-family: "Segoe UI Black";
+    -fx-font-size: 14px;
+    -fx-text-fill: white;
+    -fx-opacity: 0.85;
+}
+
+.label.bottom-nav:hover {
+    -fx-opacity: 1;
+    -fx-cursor: hand;
+    -fx-text-fill: #FFD700;
+}
+
+/* Muscle images default (non-highlighted) */
+.image-view.muscle {
+    -fx-opacity: 0.15;
+    -fx-cursor: default;;
+}
+
+.image-view.muscle:hover {
+    -fx-opacity: 0.9;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, #00f7ff, 15, 0.6, 0, 0);
+}

@@ -1,4 +1,4 @@
-package fitnessappproject;
+package fitnessappproject.pageControllers;
 
 import java.io.IOException;
 import java.net.URL;
@@ -29,19 +29,26 @@ import javafx.util.Duration;
 public class Controller extends AbstractController {
 
 
-
-
-    @FXML private ImageView FoodImg, ProgramsImg, SportImg;
-    @FXML private Hyperlink ClubsLink, FoodLink, HomeLink, WorckoutLink;
-    @FXML private Hyperlink FoodMoreLink, ProgramsMoreLink, ClubsMoreLink;
-    @FXML private ResourceBundle resources;
-    @FXML private URL location;
+    @FXML
+    private ImageView FoodImg, ProgramsImg, SportImg;
+    @FXML
+    private Hyperlink ClubsLink, FoodLink, HomeLink, WorckoutLink, ExerciseAndProgressLink;
+    @FXML
+    private Hyperlink FoodMoreLink, ProgramsMoreLink, ClubsMoreLink;
+    @FXML
+    private ResourceBundle resources;
+    @FXML
+    private URL location;
 
     // For Tips panel
-    @FXML private VBox tipsPanel;
-    @FXML private Label tipContent;
-    @FXML private Button nextTipButton;
-    @FXML private Button closeTipsButton;
+    @FXML
+    private VBox tipsPanel;
+    @FXML
+    private Label tipContent;
+    @FXML
+    private Button nextTipButton;
+    @FXML
+    private Button closeTipsButton;
 
     private final List<String> tips = Arrays.asList(
             "Drink at least 2 liters of water per day.",
@@ -51,14 +58,10 @@ public class Controller extends AbstractController {
             "Balanced nutrition is the basis of progress."
     );
 
-    @FXML
-    private Hyperlink FoodLink;
 
     private final Random random = new Random();
     private final Preferences prefs = Preferences.userNodeForPackage(Controller.class);
 
-    @FXML
-    private Hyperlink ExerciseAndProgressLink;
 
     @FXML
     void initialize() {
@@ -74,20 +77,20 @@ public class Controller extends AbstractController {
 
     private void setupNavigation() {
         //  for navigation links
-        HomeLink.setOnAction(event -> changePage("Home.fxml", event));
-        FoodLink.setOnAction(event -> changePage("Food.fxml", event));
-        WorckoutLink.setOnAction(event -> changePage("Workout.fxml", event));
-        ClubsLink.setOnAction(event -> changePage("SportClubs.fxml", event));
+        HomeLink.setOnAction(event -> changePage(FXMLPath + "Home.fxml", event));
+        FoodLink.setOnAction(event -> changePage(FXMLPath + "Food.fxml", event));
+        WorckoutLink.setOnAction(event -> changePage(FXMLPath + "Worckout.fxml", event));
+        ClubsLink.setOnAction(event -> changePage(FXMLPath + "SportClubs.fxml", event));
 
         //  for "Read more" links
-        FoodMoreLink.setOnAction(event -> changePage("Food.fxml", event));
-        ProgramsMoreLink.setOnAction(event -> changePage("Worсkout.fxml", event));
-        ClubsMoreLink.setOnAction(event -> changePage("SportClubs.fxml", event));
+        FoodMoreLink.setOnAction(event -> changePage(FXMLPath + "Food.fxml", event));
+        ProgramsMoreLink.setOnAction(event -> changePage(FXMLPath + "Worсkout.fxml", event));
+        ClubsMoreLink.setOnAction(event -> changePage(FXMLPath + "SportClubs.fxml", event));
 
         //  images clickable
-        FoodImg.setOnMouseClicked(event -> changePage("Food.fxml", event));
-        ProgramsImg.setOnMouseClicked(event -> changePage("Workout.fxml", event));
-        SportImg.setOnMouseClicked(event -> changePage("SportClubs.fxml", event));
+        FoodImg.setOnMouseClicked(event -> changePage(FXMLPath + "Food.fxml", event));
+        ProgramsImg.setOnMouseClicked(event -> changePage(FXMLPath + "Worckout.fxml", event));
+        SportImg.setOnMouseClicked(event -> changePage(FXMLPath + "SportClubs.fxml", event));
 
         // Style all hyperlinks
         styleHyperlink(HomeLink);
@@ -97,12 +100,13 @@ public class Controller extends AbstractController {
         styleHyperlink(FoodMoreLink);
         styleHyperlink(ProgramsMoreLink);
         styleHyperlink(ClubsMoreLink);
+        styleHyperlink(ExerciseAndProgressLink);
     }
 
     private void setupImageHoverEffects() {
 
         ExerciseAndProgressLink.setOnAction(event -> {
-            changePage("ExerciseAndProgress.fxml", event);
+            changePage(FXMLPath + "ExerciseAndProgress.fxml", event);
         });
 
         setHoverEffect(FoodImg);
@@ -156,7 +160,7 @@ public class Controller extends AbstractController {
         }
     }
 
-    private void changePage(String fxmlFile, ActionEvent event) {
+    public void changePage(String fxmlFile, ActionEvent event) {
         loadPage(fxmlFile, (Node) event.getSource());
     }
 

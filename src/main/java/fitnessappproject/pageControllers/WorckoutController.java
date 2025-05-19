@@ -1,4 +1,4 @@
-package fitnessappproject;
+package fitnessappproject.pageControllers;
 import java.io.IOException;
 
 import java.net.URL;
@@ -54,6 +54,9 @@ public class WorckoutController extends AbstractController {
 
     @FXML
     private Hyperlink FoodLink;
+
+    @FXML
+    private Hyperlink ExercisesLink;
 
     @FXML
     private ImageView ForearmId;
@@ -155,6 +158,9 @@ public class WorckoutController extends AbstractController {
             LegId.setOnMouseClicked((MouseEvent event) -> {
                 openPage("Leg.fxml", event);
                 System.out.println("Leg work");
+            });
+            ExercisesLink.setOnAction(event -> {
+                changePage("ExerciseAndProgress.fxml", event);
             });
 
         }
