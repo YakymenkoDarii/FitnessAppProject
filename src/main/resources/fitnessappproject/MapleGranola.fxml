@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: #34495E;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.MapleGranola">
+    <children>
+        <HBox alignment="CENTER" layoutX="0" layoutY="0" prefHeight="47" prefWidth="700" spacing="20" style="-fx-background-color: #34495E; -fx-padding: 10;">
+            <Hyperlink fx:id="HomeLink" style="-fx-font-weight: bold;" text="Home" textFill="#ECF0F1" underline="false">
+                <font><Font name="Segoe UI Black" size="14.0" /></font>
+            </Hyperlink>
+            <Hyperlink fx:id="FoodLink" style="-fx-font-weight: bold;" text="Food" textFill="#ECF0F1" underline="false">
+                <font><Font name="Segoe UI Black" size="14.0" /></font>
+            </Hyperlink>
+            <Hyperlink fx:id="WorckoutLink" style="-fx-font-weight: bold;" text="Workout" textFill="#ECF0F1" underline="false">
+                <font><Font name="Segoe UI Black" size="14.0" /></font>
+            </Hyperlink>
+            <Hyperlink fx:id="ClubsLink" style="-fx-font-weight: bold;" text="SportClubs" textFill="#ECF0F1" underline="false">
+                <font><Font name="Segoe UI Black" size="14.0" /></font>
+            </Hyperlink>
+        </HBox>
+
+        <!-- Title -->
+        <Label layoutX="368.0" layoutY="36.0" prefHeight="100.0" prefWidth="282.0" text="Maple and cinnamon granola" textFill="#ECECEC" wrapText="true">
+            <font><Font name="Segoe UI Black" size="25.0" /></font>
+        </Label>
+
+        <!-- Ingredients -->
+        <Label layoutX="52.0" layoutY="75.0" text="Ingredients" textFill="#ECECEC">
+            <font><Font name="Segoe UI Black" size="25.0" /></font>
+        </Label>
+
+        <!-- Instructions -->
+        <Label layoutX="44.0" layoutY="388.0" text="Instruction" textFill="#ECECEC">
+            <font><Font name="Segoe UI Black" size="28.0" /></font>
+        </Label>
+
+        <Label layoutX="43.0" layoutY="428.0" prefHeight="137.0" prefWidth="639.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 10; -fx-padding: 10;" text="1. Preheat the oven to 150°C. Line a baking tray with baking paper.&#10;2. In a large bowl, combine the oats, desicated coconut, nuts and seeds. Add the cinnamon, vanilla and maple syrup and stir well to combine.&#10;3. Lay the mixture on prepared tray, keep it quite compact (to help make clusters). Bake for 20 minutes until golden, stirring the mixture around and compacting again halfway through.&#10;4. Remove from the oven and top with cranberries and dried coconut flakes. Let sit for 10-15 minutes to cool before breaking the granola into clusters. Store in an airtight container for up to 1 month." textFill="#ECECEC" wrapText="true">
+            <font><Font name="Segoe UI" size="14.0" /></font>
+        </Label>
+
+        <!-- Nutrition -->
+        <Label layoutX="44.0" layoutY="563.0" text="Nutrition Info" textFill="#ECECEC">
+            <font><Font name="Segoe UI Black" size="28.0" /></font>
+        </Label>
+
+        <Label layoutX="44.0" layoutY="618.0" prefHeight="138.0" prefWidth="175.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 10; -fx-padding: 10;" text="Calories 301 cal&#10;Kilojoules 1259 kJ&#10;Protein 6.3 g&#10;Total fat 20.9 g&#10;Saturated fat 6.6 g" textFill="#ECECEC" wrapText="true">
+            <font><Font name="Segoe UI" size="14.0" /></font>
+        </Label>
+
+        <!-- Tips Panel -->
+        <VBox fx:id="tipsPanel" layoutX="10.0" layoutY="674.0" prefHeight="100.0" prefWidth="680.0" style="-fx-background-color: #34495E; -fx-background-radius: 10; -fx-padding: 10; -fx-spacing: 5;" visible="false">
+            <HBox alignment="CENTER_LEFT" spacing="5">
+                <Label style="-fx-text-fill: #1ABC9C; -fx-font-weight: bold;" text="💡 Tips" />
+                <Button fx:id="closeTipsButton" style="-fx-background-color: transparent; -fx-text-fill: #ECF0F1;" text="✕" />
+            </HBox>
+            <Label fx:id="tipContent" maxWidth="600.0" textFill="#ECF0F1" wrapText="true" />
+            <Button fx:id="nextTipButton" style="-fx-background-color: #1ABC9C; -fx-text-fill: white; -fx-background-radius: 5;" text="Next Tip" />
+        </VBox>
+        <Label layoutX="238.0" layoutY="618.0" prefHeight="138.0" prefWidth="175.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 10; -fx-padding: 10;" text="Carbohydrates 31.8 g&#10;Sugar 10.1 g&#10;Dietary fibre 5 g&#10;Sodium 197 mg&#10;Calcium 57 mg&#10;Iron 1.8 mg" textFill="#ECECEC" wrapText="true">
+            <font>
+                <Font name="Segoe UI" size="14.0" />
+            </font>
+        </Label>
+          <Label layoutX="44.0" layoutY="127.0" prefHeight="238.0" prefWidth="265.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 10; -fx-padding: 10;" text="1 cup rolled oats&#10;½ cup desiccated coconut&#10;½ cup raw almonds, roughly chopped&#10;¹⁄³ cup macadamias, roughly chopped&#10;¹⁄³ cup pecans, roughly chopped&#10;¹⁄³ cup pumpkin seeds&#10;¹⁄³ cup sunflower seeds&#10;2 teaspoons cinnamon&#10;1 teaspoon vanilla essence&#10;4 tablespoon maple syrup&#10;¹⁄³ cup dried cranberries&#10;¹⁄³ cup dried coconut flakes" textFill="#ECECEC" wrapText="true">
+              <font>
+                  <Font name="Segoe UI" size="14.0" />
+              </font>
+          </Label>
+      <ImageView fitHeight="238.0" fitWidth="266.0" layoutX="368.0" layoutY="127.0">
+         <image>
+            <Image url="@img/breakfastfood.jpg" />
+         </image>
+      </ImageView>
+    </children>
+</AnchorPane>
