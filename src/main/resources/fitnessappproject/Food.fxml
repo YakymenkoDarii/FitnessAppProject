@@ -4,98 +4,97 @@
 <?import javafx.scene.effect.*?>
 <?import javafx.scene.image.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.shape.*?>
 <?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #8434e0;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.FoodController">
+<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #6495ED;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.FoodController">
 
-    <HBox alignment="CENTER" spacing="20.0" style="-fx-background-color: #6a2bbd; -fx-padding: 10;">
-        <Hyperlink fx:id="HomeLink" focusTraversable="false" text="Home" textFill="WHITE" underline="false">
+    <HBox alignment="CENTER" layoutX="0.0" layoutY="0.0" prefHeight="47.0" prefWidth="700.0" spacing="20.0" style="-fx-background-color: #4682B4; -fx-padding: 10;">
+        <Hyperlink fx:id="HomeLink" layoutX="316.0" layoutY="13.0" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;" text="Home" textFill="#ECF0F1" underline="false">
             <font>
                 <Font name="Segoe UI Black" size="14.0" />
             </font>
         </Hyperlink>
-        <Hyperlink fx:id="FoodLink" focusTraversable="false" text="Food" textFill="WHITE" underline="false">
+
+        <Hyperlink fx:id="FoodLink" layoutX="395.0" layoutY="14.0" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;" text="Food" textFill="#ECF0F1" underline="false">
             <font>
                 <Font name="Segoe UI Black" size="14.0" />
             </font>
         </Hyperlink>
-        <Hyperlink fx:id="WorckoutLink" focusTraversable="false" text="Workout" textFill="WHITE" underline="false">
+
+        <Hyperlink fx:id="WorckoutLink" layoutX="472.0" layoutY="14.0" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;" text="Workout" textFill="#ECF0F1" underline="false">
             <font>
                 <Font name="Segoe UI Black" size="14.0" />
             </font>
         </Hyperlink>
-        <Hyperlink fx:id="ClubsLink" focusTraversable="false" text="SportClubs" textFill="WHITE" underline="false">
+
+        <Hyperlink fx:id="ClubsLink" layoutX="584.0" layoutY="14.0" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;" text="SportClubs" textFill="#ECF0F1" underline="false">
             <font>
                 <Font name="Segoe UI Black" size="14.0" />
             </font>
         </Hyperlink>
-      <Hyperlink fx:id="ExercisesLink" focusTraversable="false" layoutX="249.0" layoutY="20.0" text="Exercises" textFill="WHITE" underline="false">
+      <Hyperlink fx:id="ExerciseLink" layoutX="432.0" layoutY="21.0" style="-fx-focus-color: transparent; -fx-faint-focus-color: transparent;" text="Exercises" textFill="#ECF0F1" underline="false">
          <font>
             <Font name="Segoe UI Black" size="14.0" />
          </font>
       </Hyperlink>
     </HBox>
 
-    <Label layoutX="46.0" layoutY="76.0" prefHeight="118.0" prefWidth="375.0" text="Food" textFill="WHITE">
-        <font>
-            <Font name="Segoe UI Black" size="64.0" />
-        </font>
-        <effect>
-            <DropShadow color="#4a148c" radius="10.0" spread="0.5" />
-        </effect>
+    <Label layoutX="52.0" layoutY="69.0" text="Food" textFill="WHITE">
+        <font><Font name="Segoe UI Black" size="54.0" /></font>
     </Label>
 
-    <Label layoutX="52.0" layoutY="167.0" prefHeight="26.0" prefWidth="200.0" text="About health food" textFill="WHITE">
+    <Label layoutX="46.0" layoutY="147.0" prefWidth="457.0" text="Healthy Food — What Is It? Healthy eating is a balanced diet that provides your body with all the essential nutrients: proteins, fats, carbohydrates, vitamins, and minerals." textFill="WHITE" wrapText="true">
+        <font><Font name="Segoe UI Black" size="14.0" /></font>
+    </Label>
+
+    <ImageView fx:id="maple" fitHeight="180.0" fitWidth="200.0" layoutX="46.0" layoutY="271.0">
+        <image>
+            <Image url="@img/breakfastfood.jpg" />
+        </image>
+    </ImageView>
+    <Label layoutX="46.0" layoutY="245.0" text="Maple and cinnamon granola" textFill="WHITE">
         <font>
             <Font name="Segoe UI Black" size="14.0" />
         </font>
     </Label>
+    <Line endX="429.0" layoutX="198.0" layoutY="227.0" startX="-146.0" />
+    <ImageView fx:id="eggs" fitHeight="172.0" fitWidth="211.0" layoutX="46.0" layoutY="500.0">
+        <image>
+            <Image url="@img/SpanishEggs.jpg" />
+        </image>
+    </ImageView>
+    <Label layoutX="46.0" layoutY="466.0" text="Spanish bake for one" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI Black" size="14.0" />
+        </font>
+    </Label>
+    <ImageView fx:id="galette" fitHeight="172.0" fitWidth="211.0" layoutX="313.0" layoutY="500.0">
+        <image>
+            <Image url="@img/Apple-and-mixed-berry-galette.jpg" />
+        </image>
+    </ImageView>
+    <Label layoutX="316.0" layoutY="466.0" text="Apple and mixed berry galette" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI Black" size="14.0" />
+        </font>
+    </Label>
+    <ImageView fx:id="seafood" fitHeight="180.0" fitWidth="211.0" layoutX="313.0" layoutY="271.0">
+        <image>
+            <Image url="@img/ShellfishGratin.jpg" />
+        </image>
+    </ImageView>
 
-    <VBox alignment="CENTER" layoutX="46.0" layoutY="225.0" spacing="20.0">
-        <Label text="Maple and cinnamon granola" textFill="WHITE">
-            <font>
-                <Font name="Segoe UI Black" size="14.0" />
-            </font>
-        </Label>
-        <HBox alignment="CENTER" spacing="20.0">
-            <children>
-                <ImageView fx:id="FoodImg1" fitHeight="180.0" fitWidth="200.0">
-                    <image>
-                        <Image url="@img/breakfastfood.jpg" />
-                    </image>
-                    <effect>
-                        <DropShadow color="#4a148c" radius="10.0" spread="0.5" />
-                    </effect>
-                </ImageView>
-                <ImageView fx:id="FoodImg2" fitHeight="180.0" fitWidth="200.0">
-                    <image>
-                        <Image url="@img/breakfastfood.jpg" />
-                    </image>
-                    <effect>
-                        <DropShadow color="#4a148c" radius="10.0" spread="0.5" />
-                    </effect>
-                </ImageView>
-            </children>
-        </HBox>
-        <HBox alignment="CENTER" spacing="20.0">
-            <children>
-                <ImageView fx:id="FoodImg3" fitHeight="180.0" fitWidth="200.0">
-                    <image>
-                        <Image url="@img/breakfastfood.jpg" />
-                    </image>
-                    <effect>
-                        <DropShadow color="#4a148c" radius="10.0" spread="0.5" />
-                    </effect>
-                </ImageView>
-                <ImageView fx:id="FoodImg4" fitHeight="180.0" fitWidth="200.0">
-                    <image>
-                        <Image url="@img/breakfastfood.jpg" />
-                    </image>
-                    <effect>
-                        <DropShadow color="#4a148c" radius="10.0" spread="0.5" />
-                    </effect>
-                </ImageView>
-            </children>
-        </HBox>
-    </VBox>
+
+    <Label layoutX="39.0" layoutY="679.0" prefWidth="600.0" style="-fx-background-color: rgba(255,255,255,0.1); -fx-background-radius: 10; -fx-padding: 15;" text="Basics of Healthy Food: Fruits and vegetables – rich in fiber, vitamins, and antioxidants. Whole grains – oatmeal, buckwheat, brown rice, whole grain bread. Proteins – lean meats, fish, eggs, legumes, nuts. Healthy fats – olive oil, avocado, fish (omega-3). Water – staying hydrated is key to feeling good." textFill="WHITE" wrapText="true">
+        <font><Font name="Segoe UI Semibold" size="13.0" /></font>
+        <effect>
+            <DropShadow color="rgba(0,0,0,0.2)" radius="3" />
+        </effect>
+    </Label>
+    <Label layoutX="313.0" layoutY="245.0" text="Healthy seafood gratin" textFill="WHITE">
+        <font>
+            <Font name="Segoe UI Black" size="14.0" />
+        </font>
+    </Label>
 </AnchorPane>
