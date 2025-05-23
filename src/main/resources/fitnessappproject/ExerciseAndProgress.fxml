@@ -1,66 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TabPane?>
-<?import javafx.scene.layout.BorderPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
 
-<BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="700.0" stylesheets="@styles/exercise_and_progress.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.ExerciseAndProgressController">
-   <top>
-      <HBox alignment="CENTER" spacing="40.0" BorderPane.alignment="CENTER">
-         <children>
-            <Button fx:id="homeButton" contentDisplay="TOP" focusTraversable="false" mnemonicParsing="false" styleClass="menuButtons" text="Home" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
-            <Button fx:id="foodButton" contentDisplay="TOP" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Food" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
-            <Button fx:id="musclesButton" contentDisplay="TOP" focusTraversable="false" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Muscles" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
-            <Button fx:id="sportClubsButton" contentDisplay="TOP" focusTraversable="false" layoutX="114.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Sport Clubs" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
-            <Button fx:id="exercisesAndProgressButton" contentDisplay="TOP" disable="true" focusTraversable="false" mnemonicParsing="false" styleClass="menuButtons" text="Exercises" textAlignment="CENTER" />
-         </children>
-         <BorderPane.margin>
-            <Insets top="8.0" />
-         </BorderPane.margin>
-      </HBox>
-   </top>
-   <center>
-      <HBox alignment="CENTER">
-         <children>
-            <VBox spacing="5.0" HBox.hgrow="ALWAYS">
-               <children>
-                  <HBox alignment="CENTER" spacing="8.0" VBox.vgrow="ALWAYS">
-                     <children>
-                        <Label styleClass="group-label" text="My Training Program" />
-                        <Button fx:id="addGroupButton" mnemonicParsing="false" styleClass="group-button" text="Add Group" />
-                        <Button fx:id="deleteGroupButton" mnemonicParsing="false" styleClass="group-button" text="Delete Group" />
-                     </children>
-                  </HBox>
-                  <TabPane fx:id="tabPane" cache="true" cacheHint="QUALITY" nodeOrientation="LEFT_TO_RIGHT" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
-                     <VBox.margin>
-                        <Insets left="8.0" />
-                     </VBox.margin>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <padding>
-                        <Insets left="40.0" right="30.0" />
-                     </padding>
-                  </TabPane>
-                  <HBox alignment="TOP_CENTER" spacing="10.0" VBox.vgrow="NEVER">
-                     <children>
-                        <Button fx:id="addExerciseButton" mnemonicParsing="false" styleClass="exercise-button" text="Add Excercise" />
-                        <Button fx:id="deleteExerciseButton" mnemonicParsing="false" styleClass="exercise-button" text="Delete Exercise" />
-                     </children>
-                     <opaqueInsets>
-                        <Insets />
-                     </opaqueInsets>
-                     <VBox.margin>
-                        <Insets bottom="30.0" />
-                     </VBox.margin>
-                  </HBox>
-               </children>
-            </VBox>
-         </children>
-      </HBox>
-   </center>
+<BorderPane fx:id="mainPane" prefHeight="800.0" prefWidth="700.0" stylesheets="@styles/exercise_and_progress.css" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.ExerciseAndProgressController">
+    <top>
+        <HBox alignment="CENTER" spacing="40.0" BorderPane.alignment="CENTER">
+            <children>
+                <Button fx:id="homeButton" contentDisplay="TOP" focusTraversable="false" mnemonicParsing="false" styleClass="menuButtons" text="Home" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
+                <Button fx:id="foodButton" contentDisplay="TOP" focusTraversable="false" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Food" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
+                <Button fx:id="musclesButton" contentDisplay="TOP" focusTraversable="false" layoutX="62.0" layoutY="10.0" mnemonicParsing="false" styleClass="menuButtons" text="Muscles" textAlignment="CENTER" textOverrun="LEADING_ELLIPSIS" wrapText="true" />
+                <Button fx:id="exercisesAndProgressButton" contentDisplay="TOP" disable="true" focusTraversable="false" mnemonicParsing="false" styleClass="menuButtons" text="Exercises" textAlignment="CENTER" />
+            </children>
+            <BorderPane.margin>
+                <Insets top="8.0" />
+            </BorderPane.margin>
+        </HBox>
+    </top>
+    <center>
+        <HBox alignment="CENTER">
+            <children>
+                <VBox spacing="5.0" HBox.hgrow="ALWAYS">
+                    <children>
+                        <HBox alignment="CENTER" spacing="8.0" VBox.vgrow="ALWAYS">
+                            <children>
+                                <Label styleClass="group-label" text="My Training Program" />
+                                <Button fx:id="addGroupButton" mnemonicParsing="false" styleClass="group-button" text="Add Group" />
+                                <Button fx:id="deleteGroupButton" mnemonicParsing="false" styleClass="group-button" text="Delete Group" />
+                            </children>
+                        </HBox>
+                        <TabPane fx:id="tabPane" cache="true" cacheHint="QUALITY" nodeOrientation="LEFT_TO_RIGHT" tabClosingPolicy="UNAVAILABLE" VBox.vgrow="ALWAYS">
+                            <VBox.margin>
+                                <Insets left="8.0" />
+                            </VBox.margin>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <padding>
+                                <Insets left="40.0" right="30.0" />
+                            </padding>
+                        </TabPane>
+                        <HBox alignment="TOP_CENTER" spacing="10.0" VBox.vgrow="NEVER">
+                            <children>
+                                <Button fx:id="addExerciseButton" mnemonicParsing="false" styleClass="exercise-button" text="Add Excercise" />
+                                <Button fx:id="deleteExerciseButton" mnemonicParsing="false" styleClass="exercise-button" text="Delete Exercise" />
+                            </children>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                            <VBox.margin>
+                                <Insets bottom="30.0" />
+                            </VBox.margin>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </HBox>
+    </center>
 </BorderPane>

@@ -50,9 +50,6 @@ public class WorckoutController extends AbstractController {
     private ImageView ChestId;
 
     @FXML
-    private Hyperlink ClubsLink;
-
-    @FXML
     private Hyperlink FoodLink;
 
     @FXML
@@ -166,8 +163,6 @@ public class WorckoutController extends AbstractController {
         }
 
         WorckoutLink.setOnAction(event -> changePage("Worckout.fxml", event));
-
-        ClubsLink.setOnAction(event -> changePage("SportClubs.fxml", event));
 
         FoodLink.setOnAction(event -> changePage("Food.fxml", event));
 

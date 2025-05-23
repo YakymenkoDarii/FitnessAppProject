@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.Controller">
+<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #2C3E50;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.pageControllers.Controller">
    <children>
       <HBox alignment="TOP_RIGHT" layoutX="251.0" layoutY="13.0" prefHeight="26.0" prefWidth="393.0" spacing="10.0">
          <children>
@@ -28,12 +23,6 @@
             </Hyperlink>
       
             <Hyperlink fx:id="WorckoutLink" text="Workout" textFill="#ECF0F1" underline="false">
-               <font>
-                  <Font name="Segoe UI Black" size="14.0" />
-               </font>
-            </Hyperlink>
-      
-            <Hyperlink fx:id="ClubsLink" text="SportClubs" textFill="#ECF0F1" underline="false">
                <font>
                   <Font name="Segoe UI Black" size="14.0" />
                </font>
@@ -98,19 +87,6 @@
       </Label>
 
       <Hyperlink fx:id="ProgramsMoreLink" layoutX="268.0" layoutY="590.0" text="Read more" textFill="#1ABC9C" underline="false" />
-
-      <!-- Sport clubs section -->
-      <ImageView fx:id="SportImg" fitHeight="180.0" fitWidth="200.0" layoutX="490.0" layoutY="370.0" onMouseEntered="#onHover" onMouseExited="#onExit" preserveRatio="true" style="-fx-effect: dropshadow(gaussian, rgba(0,0,0,0.6), 10, 0.5, 0, 2); -fx-cursor: hand; ">
-         <Image url="@img/sport_clubs.jpg" />
-      </ImageView>
-
-      <Label layoutX="490.0" layoutY="560.0" text="Sport Clubs Nearby" textFill="#ECF0F1">
-         <font>
-            <Font name="Segoe UI Black" size="14.0" />
-         </font>
-      </Label>
-
-      <Hyperlink fx:id="ClubsMoreLink" layoutX="490.0" layoutY="590.0" text="Read more" textFill="#1ABC9C" underline="false" />
       <!-- For Tips -->
       <VBox fx:id="tipsPanel" prefHeight="100.0" prefWidth="Infinity" style="-fx-background-color: #34495E; -fx-background-radius: 10; -fx-padding: 10; -fx-spacing: 5;" visible="false" AnchorPane.bottomAnchor="10" AnchorPane.leftAnchor="10" AnchorPane.rightAnchor="10">
          <HBox alignment="CENTER_LEFT" spacing="5">

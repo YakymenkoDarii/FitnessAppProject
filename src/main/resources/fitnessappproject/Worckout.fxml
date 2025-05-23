@@ -25,11 +25,6 @@
                   <Font name="Segoe UI Black" size="14.0" />
               </font>
           </Hyperlink>
-          <Hyperlink fx:id="ClubsLink" focusTraversable="false" text="SportClubs" textFill="WHITE" underline="false">
-              <font>
-                  <Font name="Segoe UI Black" size="14.0" />
-              </font>
-          </Hyperlink>
          <Hyperlink fx:id="ExercisesLink" focusTraversable="false" layoutX="317.0" layoutY="10.0" text="Exercises" textFill="WHITE" underline="false">
             <font>
                <Font name="Segoe UI Black" size="14.0" />

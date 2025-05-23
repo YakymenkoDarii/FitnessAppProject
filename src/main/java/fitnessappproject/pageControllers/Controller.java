@@ -32,9 +32,9 @@ public class Controller extends AbstractController {
     @FXML
     private ImageView FoodImg, ProgramsImg, SportImg;
     @FXML
-    private Hyperlink ClubsLink, FoodLink, HomeLink, WorckoutLink, ExerciseAndProgressLink;
+    private Hyperlink FoodLink, HomeLink, WorckoutLink, ExerciseAndProgressLink;
     @FXML
-    private Hyperlink FoodMoreLink, ProgramsMoreLink, ClubsMoreLink;
+    private Hyperlink FoodMoreLink, ProgramsMoreLink;
     @FXML
     private ResourceBundle resources;
     @FXML
@@ -80,26 +80,22 @@ public class Controller extends AbstractController {
         HomeLink.setOnAction(event -> changePage(FXMLPath + "Home.fxml", event));
         FoodLink.setOnAction(event -> changePage(FXMLPath + "Food.fxml", event));
         WorckoutLink.setOnAction(event -> changePage(FXMLPath + "Worckout.fxml", event));
-        ClubsLink.setOnAction(event -> changePage(FXMLPath + "SportClubs.fxml", event));
+
 
         //  for "Read more" links
         FoodMoreLink.setOnAction(event -> changePage(FXMLPath + "Food.fxml", event));
         ProgramsMoreLink.setOnAction(event -> changePage(FXMLPath + "Worсkout.fxml", event));
-        ClubsMoreLink.setOnAction(event -> changePage(FXMLPath + "SportClubs.fxml", event));
 
         //  images clickable
         FoodImg.setOnMouseClicked(event -> changePage(FXMLPath + "Food.fxml", event));
         ProgramsImg.setOnMouseClicked(event -> changePage(FXMLPath + "Worckout.fxml", event));
-        SportImg.setOnMouseClicked(event -> changePage(FXMLPath + "SportClubs.fxml", event));
 
         // Style all hyperlinks
         styleHyperlink(HomeLink);
         styleHyperlink(FoodLink);
         styleHyperlink(WorckoutLink);
-        styleHyperlink(ClubsLink);
         styleHyperlink(FoodMoreLink);
         styleHyperlink(ProgramsMoreLink);
-        styleHyperlink(ClubsMoreLink);
         styleHyperlink(ExerciseAndProgressLink);
     }
 

@@ -34,8 +34,6 @@ public class ExerciseAndProgressController extends AbstractController
     @FXML
     private Button musclesButton;
     @FXML
-    private Button sportClubsButton;
-    @FXML
     private Button exercisesAndProgressButton;
 
     @FXML
@@ -72,7 +70,6 @@ public class ExerciseAndProgressController extends AbstractController
         setPictureForTheButton(homeButton, "HomeButton.png");
         setPictureForTheButton(foodButton, "FoodButton.png");
         setPictureForTheButton(musclesButton, "MusclesButton.png");
-        setPictureForTheButton(sportClubsButton, "SportClubsButton.png");
         setPictureForTheButton(exercisesAndProgressButton, "ExercisesAndProgressButton.png");
 
         homeButton.setOnAction(event -> {
@@ -83,9 +80,6 @@ public class ExerciseAndProgressController extends AbstractController
         });
         musclesButton.setOnAction(event -> {
             changePage("Worckout.fxml", event);
-        });
-        sportClubsButton.setOnAction(event -> {
-            changePage("SportClubs.fxml", event);
         });
         addGroupButton.setOnAction(event -> {
             createNewTab();

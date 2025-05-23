@@ -28,8 +28,6 @@ public class FoodController extends AbstractController {
     @FXML
     private URL location;
 
-    @FXML
-    private Hyperlink ClubsLink;
 
     @FXML
     private Hyperlink ExerciseLink;
@@ -67,13 +65,11 @@ public class FoodController extends AbstractController {
         HomeLink.setOnAction(event -> changePage("Home.fxml", event));
         FoodLink.setOnAction(event -> changePage("Food.fxml", event));
         WorckoutLink.setOnAction(event -> changePage("Worckout.fxml", event));
-        ClubsLink.setOnAction(event -> changePage("SportClubs.fxml", event));
         ExerciseLink.setOnAction(event -> changePage("ExerciseAndProgress.fxml", event));
 
         styleHyperlink(HomeLink);
         styleHyperlink(FoodLink);
         styleHyperlink(WorckoutLink);
-        styleHyperlink(ClubsLink);
         styleHyperlink(ExerciseLink);
     }
 
