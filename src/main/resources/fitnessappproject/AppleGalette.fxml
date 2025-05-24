@@ -1,16 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
-<?import javafx.scene.control.Hyperlink?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
-<?import javafx.scene.layout.HBox?>
-<?import javafx.scene.layout.VBox?>
-<?import javafx.scene.text.Font?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #34495E;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.AppleGaletteController">
+<AnchorPane prefHeight="800.0" prefWidth="700.0" style="-fx-background-color: #34495E;" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="fitnessappproject.AppleGaletteController">
     <children>
 
         <HBox alignment="CENTER" prefHeight="47" prefWidth="700" spacing="20" style="-fx-background-color: #34495E; -fx-padding: 10;">
@@ -23,7 +18,7 @@
             <Hyperlink fx:id="WorckoutLink" style="-fx-font-weight: bold;" text="Workout" textFill="#ECF0F1" underline="false">
                 <font><Font name="Segoe UI Black" size="14.0" /></font>
             </Hyperlink>
-            <Hyperlink fx:id="ClubsLink" style="-fx-font-weight: bold;" text="SportClubs" textFill="#ECF0F1" underline="false">
+            <Hyperlink fx:id="ExerciseLink" style="-fx-font-weight: bold;" text="Exercises" textFill="#ECF0F1" underline="false">
                 <font><Font name="Segoe UI Black" size="14.0" /></font>
             </Hyperlink>
         </HBox>

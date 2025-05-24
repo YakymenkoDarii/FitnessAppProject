@@ -6,7 +6,6 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
-import javafx.fxml.Initializable;
 import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -22,7 +21,7 @@ public class BackController {
     private URL location;
 
     @FXML
-    private Hyperlink ClubsLink;
+    private Hyperlink ExerciseLink;
 
     @FXML
     private Hyperlink FoodLink;
@@ -39,8 +38,8 @@ public class BackController {
             changePage("Worckout.fxml", event);
         });
 
-        ClubsLink.setOnAction(event -> {
-            changePage("SportClubs.fxml", event);
+        ExerciseLink.setOnAction(event -> {
+            changePage("ExerciseAndProgress.fxml", event);
         });
 
         //open food page

@@ -24,7 +24,7 @@ public class SeafoodController  {
     private URL location;
 
     @FXML
-    private Hyperlink ClubsLink;
+    private Hyperlink ExerciseLink;
 
     @FXML
     private Hyperlink FoodLink;
@@ -47,13 +47,13 @@ public class SeafoodController  {
         HomeLink.setOnAction(event -> changePage("Home.fxml", event));
         FoodLink.setOnAction(event -> changePage("Food.fxml", event));
         WorckoutLink.setOnAction(event -> changePage("Worckout.fxml", event));
-        ClubsLink.setOnAction(event -> changePage("SportClubs.fxml", event));
+        ExerciseLink.setOnAction(event -> changePage("ExerciseAndProgress.fxml", event));
 
 
         styleHyperlink(HomeLink);
         styleHyperlink(FoodLink);
         styleHyperlink(WorckoutLink);
-        styleHyperlink(ClubsLink);
+        styleHyperlink(ExerciseLink);
     }
 
     public void changePage(String fxmlFile, ActionEvent event) {

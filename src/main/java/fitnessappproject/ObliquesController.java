@@ -21,7 +21,7 @@ public class ObliquesController {
     private URL location;
 
     @FXML
-    private Hyperlink ClubsLink;
+    private Hyperlink ExerciseLink;
 
     @FXML
     private Hyperlink FoodLink;
@@ -38,8 +38,8 @@ public class ObliquesController {
             changePage("Worckout.fxml", event);
         });
 
-        ClubsLink.setOnAction(event -> {
-            changePage("SportClubs.fxml", event);
+        ExerciseLink.setOnAction(event -> {
+            changePage("ExerciseAndProgress.fxml", event);
         });
 
         //open food page
