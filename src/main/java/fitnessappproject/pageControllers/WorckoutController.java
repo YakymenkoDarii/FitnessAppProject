@@ -58,8 +58,6 @@ public class WorckoutController extends AbstractController {
     @FXML
     private ImageView ForearmId;
 
-    @FXML
-    private Label GymLink;
 
     @FXML
     private Hyperlink HomeLink;
@@ -82,8 +80,6 @@ public class WorckoutController extends AbstractController {
     @FXML
     private ImageView TricepsId;
 
-    @FXML
-    private Label VideosLink;
 
     @FXML
     private Hyperlink WorckoutLink;
@@ -170,19 +166,6 @@ public class WorckoutController extends AbstractController {
 
     }
 
-    //changing pages
-    public void changePage(String fxmlFile, ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fitnessappproject/" + fxmlFile));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void openPage(String fxmlFile, MouseEvent event) {
         try {
