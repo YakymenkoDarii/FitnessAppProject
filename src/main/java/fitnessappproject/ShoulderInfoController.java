@@ -3,6 +3,8 @@ package fitnessappproject;
 import java.io.IOException;
 import java.net.URL;
 import java.util.ResourceBundle;
+
+import fitnessappproject.abstractController.AbstractController;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -12,7 +14,7 @@ import javafx.scene.Scene;
 import javafx.scene.control.Hyperlink;
 import javafx.stage.Stage;
 
-public class ShoulderInfoController {
+public class ShoulderInfoController extends AbstractController {
 
         @FXML
         private ResourceBundle resources;
@@ -51,16 +53,4 @@ public class ShoulderInfoController {
                     changePage("Home.fxml", event);
                 });
             }
-    public void changePage(String fxmlFile, ActionEvent event) {
-        try {
-            FXMLLoader loader = new FXMLLoader(getClass().getResource("/fitnessappproject/" + fxmlFile));
-            Parent root = loader.load();
-            Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
-            stage.setScene(new Scene(root));
-            stage.show();
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
 }

@@ -1,6 +1,6 @@
 package fitnessappproject.pageControllers;
 
-import fitnessappproject.ExerciseEntry;
+import fitnessappproject.ExerciseEntity;
 import javafx.collections.ObservableList;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
@@ -13,11 +13,11 @@ import fitnessappproject.AppState;
 public class ExerciseTableController {
 
 
-    @FXML private TableView<ExerciseEntry> table;
-    @FXML private TableColumn<ExerciseEntry,String>  colExercise;
-    @FXML private TableColumn<ExerciseEntry,Integer> colSets;
-    @FXML private TableColumn<ExerciseEntry,Integer> colReps;
-    @FXML private TableColumn<ExerciseEntry,Double> colWeight;
+    @FXML private TableView<ExerciseEntity> table;
+    @FXML private TableColumn<ExerciseEntity,String>  colExercise;
+    @FXML private TableColumn<ExerciseEntity,Integer> colSets;
+    @FXML private TableColumn<ExerciseEntity,Integer> colReps;
+    @FXML private TableColumn<ExerciseEntity,Double> colWeight;
 
     private ExerciseAndProgressController parentController;
 
@@ -25,7 +25,7 @@ public class ExerciseTableController {
 
     public void init(String tabTitle) {
         this.tabTitle = tabTitle;
-        ObservableList<ExerciseEntry> list = AppState.forTab(tabTitle);
+        ObservableList<ExerciseEntity> list = AppState.forTab(tabTitle);
         table.setItems(list);
     }
 
@@ -37,7 +37,7 @@ public class ExerciseTableController {
         colExercise.setOnEditCommit(e ->
                 e.getRowValue().setExercise(e.getNewValue()));
         colExercise.setOnEditCommit(event -> {
-            ExerciseEntry entry = event.getRowValue();
+            ExerciseEntity entry = event.getRowValue();
             entry.setExercise(event.getNewValue());
             if (parentController != null) {
                // parentController.updateCheckBox();
@@ -63,13 +63,13 @@ public class ExerciseTableController {
     }
 
 
-    private static TableView<ExerciseEntry> findTableViewInTab(Tab tab) {
+    private static TableView<ExerciseEntity> findTableViewInTab(Tab tab) {
         Node content = tab.getContent();
         if (content instanceof Parent parent) {
             // Traverse the node tree to find the TableView
             for (Node node : parent.lookupAll(".table-view")) {
                 if (node instanceof TableView<?> tableView) {
-                    return (TableView<ExerciseEntry>) tableView;
+                    return (TableView<ExerciseEntity>) tableView;
                 }
             }
         }
@@ -80,16 +80,16 @@ public class ExerciseTableController {
         Tab selectedTab = tabPane.getSelectionModel().getSelectedItem();
         if (selectedTab == null) return;
 
-        TableView<ExerciseEntry> table = findTableViewInTab(selectedTab);
+        TableView<ExerciseEntity> table = findTableViewInTab(selectedTab);
         if (table != null) {
 
-            ExerciseEntry newEntry = new ExerciseEntry("Exercise", 0, 0, 0);
+            ExerciseEntity newEntry = new ExerciseEntity("Exercise", 0, 0, 0);
 
 
             String tabName = selectedTab.getText();
 
 
-            ObservableList<ExerciseEntry> list = AppState.forTab(tabName);
+            ObservableList<ExerciseEntity> list = AppState.forTab(tabName);
             list.add(newEntry);
 
 
@@ -106,9 +106,9 @@ public class ExerciseTableController {
         Tab selectedTab = tabPane.getSelectionModel().getSelectedItem();
         if (selectedTab == null) return;
 
-        TableView<ExerciseEntry> table = findTableViewInTab(selectedTab);
+        TableView<ExerciseEntity> table = findTableViewInTab(selectedTab);
         if (table != null) {
-            ExerciseEntry selected = table.getSelectionModel().getSelectedItem();
+            ExerciseEntity selected = table.getSelectionModel().getSelectedItem();
             if (selected != null) {
                 table.getItems().remove(selected);
 
@@ -118,7 +118,7 @@ public class ExerciseTableController {
         }
     }
 
-    public TableView<ExerciseEntry> getTableView() {
+    public TableView<ExerciseEntity> getTableView() {
         return table;
     }
 

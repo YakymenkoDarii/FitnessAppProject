@@ -1,22 +1,18 @@
 package fitnessappproject;
 
-import fitnessappproject.pageControllers.ExerciseAndProgressController;
 import fitnessappproject.pageControllers.ExerciseTableController;
-import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.fxml.FXMLLoader;
 import javafx.scene.control.Tab;
 
-import java.nio.charset.Charset;
 import java.util.HashMap;
 import java.util.Map;
 
 public class AppState
 {
     private static ObservableList<Tab> tabs = FXCollections.observableArrayList();
-    private static final Map<String, ObservableList<ExerciseEntry>> logs = new HashMap<>();
-    private static final Map<String, ObservableList<ExerciseEntry>> tabEntries = new HashMap<>();
+    private static final Map<String, ObservableList<ExerciseEntity>> logs = new HashMap<>();
+    private static final Map<String, ObservableList<ExerciseEntity>> tabEntries = new HashMap<>();
     private static final Map<Tab, ExerciseTableController> tabControllers = new HashMap<>();
 
 
@@ -40,16 +36,16 @@ public class AppState
         tabs.remove(tab);
     }
 
-    public static ObservableList<ExerciseEntry> forTab(String tabTitle) {
+    public static ObservableList<ExerciseEntity> forTab(String tabTitle) {
         return logs.computeIfAbsent(tabTitle,
                 k -> FXCollections.observableArrayList());
     }
 
-    public static ObservableList<ExerciseEntry> getEntriesForTab(String tabName) {
+    public static ObservableList<ExerciseEntity> getEntriesForTab(String tabName) {
         return tabEntries.computeIfAbsent(tabName, k -> FXCollections.observableArrayList());
     }
 
-    public static void setEntriesForTab(String tabName, ObservableList<ExerciseEntry> entries) {
+    public static void setEntriesForTab(String tabName, ObservableList<ExerciseEntity> entries) {
         tabEntries.put(tabName, entries);
     }
 

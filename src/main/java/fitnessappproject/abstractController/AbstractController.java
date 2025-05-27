@@ -13,6 +13,7 @@ import java.net.URL;
 public abstract class AbstractController
 {
     public final String FXMLPath = "/fitnessappproject/";
+
     public void changePage(String fxmlFile, ActionEvent event) {
         String fullPath = FXMLPath + fxmlFile;
         URL url = getClass().getResource(fullPath);

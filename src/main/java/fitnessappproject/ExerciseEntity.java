@@ -2,13 +2,13 @@ package fitnessappproject;
 
 import javafx.beans.property.*;
 
-public class ExerciseEntry {
+public class ExerciseEntity {
     private final StringProperty exercise = new SimpleStringProperty();
     private final IntegerProperty sets     = new SimpleIntegerProperty();
     private final IntegerProperty reps     = new SimpleIntegerProperty();
     private final DoubleProperty  weight   = new SimpleDoubleProperty();
 
-    public ExerciseEntry(String exercise, int sets, int reps, double weight) {
+    public ExerciseEntity(String exercise, int sets, int reps, double weight) {
         this.exercise.set(exercise);
         this.sets.set(sets);
         this.reps.set(reps);
